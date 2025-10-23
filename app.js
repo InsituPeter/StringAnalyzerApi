@@ -1,5 +1,7 @@
-const path= require('path');
-const dotenv= require('dotenv');
+require("dotenv").config()
+//const path= require('path');
+
+//const dotenv= require('dotenv');
 const express= require('express');
 const app= express();
 const connectdb= require('./db');
@@ -15,10 +17,10 @@ const limiter= rateLimit({
     legacyHeaders: false,
 })
 //configuration
-const envFile= process.env.NODE_ENV 
+/*const envFile= process.env.NODE_ENV 
           ? `.env.${process.env.NODE_ENV}`
           :`.env.development`;
-dotenv.config({path: path.resolve(__dirname, envFile)});
+dotenv.config({path: path.resolve(__dirname, envFile)});*/
 
 const PORT= process.env.PORT 
 //Middleware

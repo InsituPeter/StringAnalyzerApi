@@ -54,7 +54,7 @@ analyzerSchema.statics.is_palindrome= function(value){
     }
     const clean = value.replace(/\s+/g, "").toLowerCase();
     const reversed= clean.split('').reverse().join('');
-    return value === reversed
+    return clean === reversed
 }  
 
 analyzerSchema.statics.unique_characters= function(value){

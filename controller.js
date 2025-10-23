@@ -47,12 +47,7 @@ const getSpecificString= async(req,res,next)=>{
   if(!stringData){
     return next(new CustomAPIError("String does not exist in the system", StatusCodes.NOT_FOUND))
   }
-  res.status(StatusCodes.OK).json({
-    id: stringData.properties.sha256_hash,
-    value: stringData.value,
-    properties: stringData.properties,
-    created_at: stringData.created_at
-  })
+  res.status(StatusCodes.OK).json(stringData)
 }
 
 const getAllString= async(req,res, next)=>{
